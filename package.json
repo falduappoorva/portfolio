@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "security:audit": "npm audit --audit-level=high",
+    "security:check": "npm run build && npm run security:audit"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
