@@ -16,6 +16,7 @@ import Section from '../components/Section';
 import Reveal from '../components/Reveal';
 import Badge from '../components/Badge';
 import ThemeToggle from '../components/ThemeToggle';
+import { Analytics } from '@vercel/analytics/next';
 
 const metrics = [
   { value: '10+', label: 'Years in mobile product engineering and cybersecurity.' },
@@ -595,6 +596,7 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
+      <Analytics />
     </main>
   );
 }
