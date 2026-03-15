@@ -1,5 +1,6 @@
 import './globals.css';
 import { Space_Grotesk, Plus_Jakarta_Sans } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 
 const displayFont = Space_Grotesk({
   subsets: ['latin'],
@@ -36,7 +37,10 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }

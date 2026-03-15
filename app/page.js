@@ -33,6 +33,14 @@ const highlightBullets = [
 
 const featuredProjects = [
   {
+    title: 'Enterprise Pharmacy Apps',
+    subtitle: 'Accredo • Express-Scripts • InsiderRx',
+    summary:
+      'Owned end-to-end Android delivery for large healthcare experiences, including modernization, analytics instrumentation, and platform reliability improvements.',
+    points: ['Kotlin + Compose migration', 'Adobe + Firebase analytics', 'Dagger/Retrofit architecture', 'Millions of patients'],
+    link: 'https://play.google.com/store/apps/details?id=com.accredohealth.accredo',
+  },
+  {
     title: 'FreeStyle Libre 3',
     subtitle: 'Secure mobile medical ecosystem',
     summary:
@@ -41,15 +49,7 @@ const featuredProjects = [
     link: 'https://play.google.com/store/apps/details?id=com.freestylelibre3.app.us&hl=en_US',
   },
   {
-    title: 'Enterprise Pharmacy Apps',
-    subtitle: 'Accredo • Medco • InsiderX',
-    summary:
-      'Owned end-to-end Android delivery for large healthcare experiences, including modernization, analytics instrumentation, and platform reliability improvements.',
-    points: ['Kotlin + Compose migration', 'Adobe + Firebase analytics', 'Dagger/Retrofit architecture', 'Millions of patients'],
-    link: 'https://play.google.com/store/apps/details?id=com.accredohealth.accredo',
-  },
-  {
-    title: 'SMUDE / EduNxt',
+    title: 'UNext',
     subtitle: 'Multi-tenant EdTech platform',
     summary:
       'Architected a single-codebase mobile ecosystem serving 13+ enterprise customers with high growth and strong engagement outcomes.',
@@ -168,6 +168,9 @@ const certifications = [
     title: 'Programming for Everybody (Python)',
     href: 'https://www.coursera.org/account/accomplishments/verify/UBFZTE2YKEZT',
   },
+];
+
+const awards = [
   {
     title: 'EdTechReview Award Winner (2019)',
     href: 'https://www.edtechreview.in/news/edtechreview-award-winners-2019-corporate/',
@@ -176,10 +179,10 @@ const certifications = [
 
 const appLinks = [
   { name: 'Accredo', href: 'https://play.google.com/store/apps/details?id=com.accredohealth.accredo' },
-  { name: 'Medco', href: 'https://play.google.com/store/apps/details?id=com.medco.medcopharmacy&hl=en_US' },
-  { name: 'InsiderX', href: 'http://play.google.com/store/apps/details?id=com.insiderx.mobile&hl=en_US' },
+  { name: 'Express-Scripts', href: 'https://play.google.com/store/apps/details?id=com.medco.medcopharmacy&hl=en_US' },
+  { name: 'InsiderRx', href: 'http://play.google.com/store/apps/details?id=com.insiderx.mobile&hl=en_US' },
   { name: 'FreeStyle Libre 3', href: 'https://play.google.com/store/apps/details?id=com.freestylelibre3.app.us&hl=en_US' },
-  { name: 'SMUDE / EduNxt', href: 'https://play.google.com/store/apps/details?id=com.edunxt.smude' },
+  { name: 'UNext', href: 'https://play.google.com/store/apps/details?id=com.edunxt.smude' },
 ];
 
 export default function HomePage() {
@@ -496,6 +499,31 @@ export default function HomePage() {
                 <p className="text-lg font-semibold text-text transition group-hover:text-cyan">{item.title}</p>
                 <p className="mt-3 inline-flex items-center gap-2 text-sm text-muted">
                   Open credential <ArrowUpRight size={16} />
+                </p>
+              </a>
+            </Reveal>
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        id="awards"
+        eyebrow="Awards"
+        title="Recognition"
+        intro="Industry recognition for impact delivered through education technology platforms."
+      >
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {awards.map((item, index) => (
+            <Reveal key={item.title} delay={index * 0.05}>
+              <a
+                href={item.href}
+                target="_blank"
+                rel="noreferrer"
+                className="group block rounded-3xl border border-line/35 bg-surface/60 p-7 shadow-glow transition hover:-translate-y-1 hover:border-cyan/60"
+              >
+                <p className="text-lg font-semibold text-text transition group-hover:text-cyan">{item.title}</p>
+                <p className="mt-3 inline-flex items-center gap-2 text-sm text-muted">
+                  Open award detail <ArrowUpRight size={16} />
                 </p>
               </a>
             </Reveal>
