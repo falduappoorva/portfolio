@@ -9,7 +9,7 @@ export default function Section({ id, eyebrow, title, intro, children, className
                 {eyebrow}
               </p>
             )}
-            {title && <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">{title}</h2>}
+            {title && <h2 className="text-3xl font-bold tracking-tight text-text md:text-4xl">{title}</h2>}
             {intro && <p className="mt-4 text-lg leading-8 text-muted">{intro}</p>}
           </div>
         )}
